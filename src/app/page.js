@@ -1,6 +1,9 @@
 import Head from "next/head";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import About from "./about/page";
+import Skills from "./skills/page";
+import Contact from "./contact/page";
 // import Hero from "../components/Hero";
 // import About from "../components/About";
 // import Skills from "../components/Skills";
@@ -24,28 +27,18 @@ export default function Home() {
         <section id="home" className="pt-16">
           <Hero />
         </section>
-        
-        {/* <section id="home" className="pt-16">
-          <Hero />
-        </section> */}
 
-        {/* <section id="about">
+        <section id="about">
           <About />
         </section>
 
         <section id="skills">
           <Skills />
-        </section> */}
-
-        {/* <section id="projects">
-          <Projects />
         </section>
 
         <section id="contact">
           <Contact />
         </section>
-
-        <Footer /> */}
       </main>
     </>
   );

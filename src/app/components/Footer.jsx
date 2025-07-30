@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaFacebook, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer items-center p-6 bg-[#111111] text-white mt-20">
+    <footer className="footer items-center p-6 bg-[#111111] text-white">
       <div className="grid-flow-col items-center">
         <p className="text-sm font-semibold">
           © {new Date().getFullYear()} Tuhin. All rights reserved.
@@ -13,7 +13,7 @@ const Footer = () => {
 
       <div className="grid-flow-col gap-6 md:place-self-center md:justify-self-end text-2xl">
         <a
-          href="https://github.com/your-username"
+          href="https://github.com/tuhinalrakib"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
@@ -22,7 +22,7 @@ const Footer = () => {
           <FaGithub />
         </a>
         <a
-          href="https://linkedin.com/in/your-username"
+          href="https://www.linkedin.com/in/tuhin-al-rakib-5a4a71103/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
@@ -31,7 +31,7 @@ const Footer = () => {
           <FaLinkedin />
         </a>
         <a
-          href="https://facebook.com/your-profile"
+          href="https://www.facebook.com/engrtuhin.roky"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
@@ -40,7 +40,7 @@ const Footer = () => {
           <FaFacebook />
         </a>
         <a
-          href="mailto:your-email@example.com"
+          href="mailto:eng.tuhin77@gmail.com"
           aria-label="Email"
           className="hover:text-emerald-300 transition duration-300"
         >

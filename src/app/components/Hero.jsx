@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   return (
@@ -29,6 +30,27 @@ const Hero = () => {
           transition={{ duration: 1 }}
         >
           <h1 className="text-5xl font-bold text-primary">Hi, I'm Tuhin</h1>
+          <h3 className="text-xl md:text-2xl lg:text-4xl my-7 font-semibold">
+            I{' '}
+            <span className="text-purple-800 font-extrabold">
+              <Typewriter
+                words={[
+                  'build full-stack web apps',
+                  'love clean and modern UI',
+                  'solve real-world problems with code',
+                  'work with React, Node & MongoDB',
+                  'deploy secure and scalable apps',
+                ]}
+                loop={0} // infinite loop
+                cursor
+                cursorStyle="|"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1500}
+              />
+            </span>
+          </h3>
+
           <p className="py-4 text-lg text-base-content">
             I’m a passionate <span className="font-semibold">MERN Stack Developer</span> who loves building full-stack web apps with elegant UIs and modern tools like React, Next.js, MongoDB, Firebase, and Tailwind CSS.
           </p>
