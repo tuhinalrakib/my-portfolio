@@ -9,7 +9,7 @@ const projects = [
     description: 'Full-featured real estate web app with user roles, property listings, payments, and admin control.',
     image: '/real-estate.png',
     liveLink: 'https://real-estate-316cb.web.app/',
-    githubLink: 'https://github.com/yourname/real-estate',
+    githubLink: 'https://github.com/tuhinalrakib/real-estate-client',
     tech: ['React', 'Tailwind CSS', 'MongoDB', 'Firebase', 'Stripe'],
   },
   {
@@ -28,14 +28,14 @@ const projects = [
     githubLink: 'https://github.com/yourname/parcel-app',
     tech: ['Next.js', 'Tailwind', 'MongoDB', 'Stripe', 'Firebase'],
   },
-  {
-    title: 'Marathon Management App',
-    description: 'Marathon Management system with add marathons, see others Marathons, Particpate Other Marathon, and Registraion Process',
-    image: '/projects/parcel-app.jpg',
-    liveLink: 'https://parcelapp-yourname.vercel.app',
-    githubLink: 'https://github.com/yourname/parcel-app',
-    tech: ['React.js', 'Tailwind', 'MongoDB', "JWT", 'Firebase'],
-  },
+  // {
+  //   title: 'Marathon Management App',
+  //   description: 'Marathon Management system with add marathons, see others Marathons, Particpate Other Marathon, and Registraion Process',
+  //   image: '/projects/parcel-app.jpg',
+  //   liveLink: 'https://parcelapp-yourname.vercel.app',
+  //   githubLink: 'https://github.com/yourname/parcel-app',
+  //   tech: ['React.js', 'Tailwind', 'MongoDB', "JWT", 'Firebase'],
+  // },
 ];
 
 const ProjectsClient = () => {
@@ -57,6 +57,9 @@ const ProjectsClient = () => {
           {projects.map((project, idx) => (
             <motion.div
               key={idx}
+              data-aos = "flip-left"
+              data-aos-delay = "600"
+              data-aos-duration = "700"
               className="card bg-fuchsia-500 shadow-xl"
               whileHover={{ scale: 1.03 }}
               transition={{ type: 'spring', stiffness: 300 }}

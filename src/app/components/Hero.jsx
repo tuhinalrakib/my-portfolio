@@ -1,10 +1,15 @@
 'use client';
+import { useTheme } from "@/context/ThemeContext";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
 
+
 const Hero = () => {
+  const {theme} = useTheme()
+  console.log(theme)
+  
   return (
     <div className="hero min-h-screen bg-base-100">
       <div className="hero-content flex-col lg:flex-row-reverse gap-10">
@@ -29,8 +34,16 @@ const Hero = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-5xl font-bold text-primary">Hi, I'm Tuhin</h1>
-          <h3 className="text-xl md:text-2xl lg:text-4xl my-7 font-semibold">
+          <h1 
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          className={`text-5xl font-bold  ${theme === "dark" && "text-white"}`}
+          >Hi, I'm Tuhin</h1>
+          <h3 
+          data-aos="fade-right"
+          data-aos-duration="3000"
+          className={`text-xl md:text-2xl lg:text-4xl my-7 font-semibold ${theme === "dark" && "text-white"}`}
+          >
             I{' '}
             <span className="text-purple-800 font-extrabold">
               <Typewriter
@@ -51,7 +64,12 @@ const Hero = () => {
             </span>
           </h3>
 
-          <p className="py-4 text-lg text-base-content">
+          <p 
+          data-aos="fade-right"
+          data-aos-delay = "300"
+          data-aos-duration="4000"
+          className="py-4 text-lg text-base-content"
+          >
             I’m a passionate <span className="font-semibold">MERN Stack Developer</span> who loves building full-stack web apps with elegant UIs and modern tools like React, Next.js, MongoDB, Firebase, and Tailwind CSS.
           </p>
 

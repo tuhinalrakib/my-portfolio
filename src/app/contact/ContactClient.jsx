@@ -62,29 +62,81 @@ const ContactClient = () => {
                         transition={{ delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        <div className="flex items-center gap-4">
+                        <div
+                            data-aos="fade-right"
+                            data-aos-delay="500"
+                            data-aos-duration="700"
+                            className="flex items-center gap-4"
+                        >
                             <FaEnvelope className="text-2xl text-primary" />
                             <p className="text-lg">eng.tuhin77@gmail.com</p>
                         </div>
-                        <div className="flex items-center gap-4">
+                        <div
+                            data-aos="fade-right"
+                            data-aos-delay="700"
+                            data-aos-duration="700"
+                            className="flex items-center gap-4"
+                        >
                             <FaPhoneAlt className="text-2xl text-primary" />
                             <p className="text-lg">+880 1609253955</p>
                         </div>
-                        <div className="flex items-center gap-4">
+                        <div
+                            data-aos="fade-right"
+                            data-aos-delay="900"
+                            data-aos-duration="700"
+                            className="flex items-center gap-4"
+                        >
                             <FaMapMarkerAlt className="text-2xl text-primary" />
                             <p className="text-lg">Dhaka, Bangladesh</p>
                         </div>
-                        <p className="text-sm mt-6">
+                        <p
+                            data-aos="fade-right"
+                            data-aos-delay="1000"
+                            data-aos-duration="700"
+                            className="text-sm mt-6"
+                        >
                             Feel free to reach out to discuss projects, collaboration or just say hi!
                         </p>
                     </motion.div>
 
                     {/* Contact Form */}
                     <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
-                        <input type="text" name="name" placeholder="Your Name" className="input input-bordered w-full" required />
-                        <input type="email" name="email" placeholder="Your Email" className="input input-bordered w-full" required />
-                        <textarea name="message" placeholder="Your Message" className="textarea textarea-bordered w-full h-32" required />
-                        <button type="submit" className="btn btn-primary w-full">Send Message</button>
+                        <input 
+                        data-aos = "fade-left"
+                        data-aos-delay = "500"
+                        data-aos-duration = "700"
+                        type="text" 
+                        name="name" 
+                        placeholder="Your Name" 
+                        className="input input-bordered w-full" 
+                        required 
+                        />
+                        <input 
+                        data-aos = "fade-left"
+                        data-aos-delay = "700"
+                        data-aos-duration = "700"
+                        type="email" 
+                        name="email" 
+                        placeholder="Your Email" 
+                        className="input input-bordered w-full" 
+                        required 
+                        />
+                        <textarea 
+                        data-aos = "fade-left"
+                        data-aos-delay = "900"
+                        data-aos-duration = "700"
+                        name="message" 
+                        placeholder="Your Message" 
+                        className="textarea textarea-bordered w-full h-32" 
+                        required 
+                        />
+                        <button 
+                        data-aos = "fade-left"
+                        data-aos-delay = "1000"
+                        data-aos-duration = "700"
+                        type="submit" 
+                        className="btn btn-primary w-full"
+                        >Send Message</button>
                     </form>
                 </div>
             </div>

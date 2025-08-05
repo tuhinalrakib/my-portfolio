@@ -15,13 +15,22 @@ const SkillsClient = () => {
       viewport={{ once: true }}
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-12">
+        <h2 
+        data-aos ="fade-up"
+        data-aos-delay ="500"
+        data-aos-duration="1000"
+        className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-12">
           My Skills
         </h2>
 
         <div className="grid md:grid-cols-3 gap-10">
           {/* Frontend Skills */}
-          <div className="bg-cyan-200 rounded-2xl p-6 shadow-lg">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="700"
+            data-aos-duration="1000"
+            className="bg-cyan-200 rounded-2xl p-6 shadow-lg"
+          >
             <h3 className="text-xl font-semibold mb-4 text-primary">Frontend</h3>
             <div className="flex flex-wrap gap-3 text-2xl">
               <span className="tooltip" data-tip="HTML5"><FaHtml5 className="text-orange-600" /></span>
@@ -35,7 +44,12 @@ const SkillsClient = () => {
           </div>
 
           {/* Backend Skills */}
-          <div className="bg-emerald-200 rounded-2xl p-6 shadow-lg">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="900"
+            data-aos-duration="1000"
+            className="bg-emerald-200 rounded-2xl p-6 shadow-lg"
+          >
             <h3 className="text-xl font-semibold mb-4 text-primary">Backend</h3>
             <div className="flex flex-wrap gap-3 text-2xl">
               <span className="tooltip" data-tip="Node.js"><FaNodeJs className="text-green-600" /></span>
@@ -47,13 +61,18 @@ const SkillsClient = () => {
           </div>
 
           {/* Tools & Others */}
-          <div className="bg-fuchsia-200 rounded-2xl p-6 shadow-lg">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="1000"
+            data-aos-duration="1000"
+            className="bg-fuchsia-200 rounded-2xl p-6 shadow-lg"
+          >
             <h3 className="text-xl font-semibold mb-4 text-primary">Tools</h3>
             <div className="flex flex-wrap gap-3 text-2xl">
               <span className="tooltip" data-tip="Git"><FaGitAlt className="text-orange-600" /></span>
               <span className="tooltip" data-tip="GitHub"><FaGithub className="text-black dark:text-white" /></span>
               <span className="tooltip" data-tip="VS Code">
-                <BiLogoVisualStudio className="text-blue-500"/></span>
+                <BiLogoVisualStudio className="text-blue-500" /></span>
               <span className="tooltip" data-tip="Postman"><SiPostman className="text-orange-500" /></span>
               <span className="tooltip" data-tip="Stripe">💳</span>
             </div>
