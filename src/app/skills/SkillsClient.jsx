@@ -1,7 +1,23 @@
 'use client';
+
 import { motion } from 'framer-motion';
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGithub, FaGitAlt } from 'react-icons/fa';
-import { SiTailwindcss, SiMongodb, SiExpress, SiFirebase, SiNextdotjs, SiJavascript, SiVisualstudio, SiPostman } from 'react-icons/si';
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaNodeJs,
+  FaGithub,
+  FaGitAlt
+} from 'react-icons/fa';
+import {
+  SiTailwindcss,
+  SiMongodb,
+  SiExpress,
+  SiFirebase,
+  SiNextdotjs,
+  SiJavascript,
+  SiPostman
+} from 'react-icons/si';
 import { BiLogoVisualStudio } from "react-icons/bi";
 
 const SkillsClient = () => {
@@ -15,15 +31,17 @@ const SkillsClient = () => {
       viewport={{ once: true }}
     >
       <div className="max-w-6xl mx-auto">
-        <h2 
-        data-aos ="fade-up"
-        data-aos-delay ="500"
-        data-aos-duration="1000"
-        className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-12">
+        <h2
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-duration="1000"
+          className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-12"
+        >
           My Skills
         </h2>
 
         <div className="grid md:grid-cols-3 gap-10">
+          
           {/* Frontend Skills */}
           <div
             data-aos="fade-up"
@@ -60,7 +78,7 @@ const SkillsClient = () => {
             </div>
           </div>
 
-          {/* Tools & Others */}
+          {/* Tools */}
           <div
             data-aos="fade-up"
             data-aos-delay="1000"
@@ -71,12 +89,12 @@ const SkillsClient = () => {
             <div className="flex flex-wrap gap-3 text-2xl">
               <span className="tooltip" data-tip="Git"><FaGitAlt className="text-orange-600" /></span>
               <span className="tooltip" data-tip="GitHub"><FaGithub className="text-black dark:text-white" /></span>
-              <span className="tooltip" data-tip="VS Code">
-                <BiLogoVisualStudio className="text-blue-500" /></span>
+              <span className="tooltip" data-tip="VS Code"><BiLogoVisualStudio className="text-blue-500" /></span>
               <span className="tooltip" data-tip="Postman"><SiPostman className="text-orange-500" /></span>
               <span className="tooltip" data-tip="Stripe">💳</span>
             </div>
           </div>
+
         </div>
       </div>
     </motion.div>

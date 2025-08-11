@@ -135,7 +135,7 @@ const ContactClient = () => {
                         data-aos-delay = "1000"
                         data-aos-duration = "700"
                         type="submit" 
-                        className="btn btn-primary w-full"
+                        className="btn btn-primary w-full hover:scale-105 transition-transform"
                         >Send Message</button>
                     </form>
                 </div>

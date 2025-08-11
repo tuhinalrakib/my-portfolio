@@ -12,30 +12,30 @@ const projects = [
     githubLink: 'https://github.com/tuhinalrakib/real-estate-client',
     tech: ['React', 'Tailwind CSS', 'MongoDB', 'Firebase', 'Stripe'],
   },
-  {
-    title: 'Job Portal',
-    description: 'Job portal with authentication, resume uploads, role-based dashboards, and job filtering.',
-    image: '/projects/job-portal.jpg',
-    liveLink: 'https://jobportal-yourname.vercel.app',
-    githubLink: 'https://github.com/yourname/job-portal',
-    tech: ['React', 'Express', 'MongoDB', 'JWT', 'Firebase'],
-  },
-  {
-    title: 'Parcel Delivery App',
-    description: 'Delivery service system with order tracking, admin control, Rider dashboard, and Stripe integration.',
-    image: '/projects/parcel-app.jpg',
-    liveLink: 'https://parcelapp-yourname.vercel.app',
-    githubLink: 'https://github.com/yourname/parcel-app',
-    tech: ['Next.js', 'Tailwind', 'MongoDB', 'Stripe', 'Firebase'],
-  },
   // {
-  //   title: 'Marathon Management App',
-  //   description: 'Marathon Management system with add marathons, see others Marathons, Particpate Other Marathon, and Registraion Process',
-  //   image: '/projects/parcel-app.jpg',
-  //   liveLink: 'https://parcelapp-yourname.vercel.app',
-  //   githubLink: 'https://github.com/yourname/parcel-app',
-  //   tech: ['React.js', 'Tailwind', 'MongoDB', "JWT", 'Firebase'],
+  //   title: 'Job Portal',
+  //   description: 'Job portal with authentication, resume uploads, role-based dashboards, and job filtering.',
+  //   image: '/projects/job-portal.jpg',
+  //   liveLink: 'https://jobportal-yourname.vercel.app',
+  //   githubLink: 'https://github.com/yourname/job-portal',
+  //   tech: ['React', 'Express', 'MongoDB', 'JWT', 'Firebase'],
   // },
+  {
+    title: 'Hobby Hub',
+    description: 'Hobby Managament Service you can add your Hobby Group, you can see other groups and manage Your Groups',
+    image: '/hobbyHub.png',
+    liveLink: 'https://hobbyhub-apps.web.app',
+    githubLink: 'https://github.com/tuhinalrakib/hobbyhub-client-side.git',
+    tech: ["React JS", 'Tailwind', 'MongoDB', 'Firebase'],
+  },
+  {
+    title: 'Marathon Management App',
+    description: 'Marathon Management system with add marathons, see others Marathons, Particpate Other Marathon, and Registraion Process',
+    image: '/marathons1.png',
+    liveLink: 'https://marathon-management-8b5cc.web.app/',
+    githubLink: 'https://github.com/tuhinalrakib/marathon-management-client',
+    tech: ['React.js', 'Tailwind', 'MongoDB', "JWT", 'Firebase'],
+  },
 ];
 
 const ProjectsClient = () => {
@@ -61,8 +61,6 @@ const ProjectsClient = () => {
               data-aos-delay = "600"
               data-aos-duration = "700"
               className="card bg-fuchsia-500 shadow-xl"
-              whileHover={{ scale: 1.03 }}
-              transition={{ type: 'spring', stiffness: 300 }}
             >
               <figure>
                 <img

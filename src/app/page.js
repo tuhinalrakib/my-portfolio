@@ -15,7 +15,6 @@ export default function Home() {
       </Head>
 
       <main className="scroll-smooth">
-        <Navbar />
 
         <section id="home" className="pt-16">
           <Hero />
