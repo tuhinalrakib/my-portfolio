@@ -59,7 +59,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-base-100 shadow-md transition-colors duration-300
+      className={`w-full fixed top-0 left-0 right-0 z-50 bg-base-100 shadow-md transition-colors duration-300
         ${theme === "dark" ? "text-white bg-gray-900" : "text-gray-900 bg-white"}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,13 +101,6 @@ const Navbar = () => {
                 </svg>
               )}
             </button>
-            <a
-              href="/Tuhin_CV.pdf"
-              download
-              className="btn btn-outline btn-primary hover:bg-primary hover:text-white transition"
-            >
-              📄 Download CV
-            </a>
 
             {/* Mobile menu button */}
             <div className="lg:hidden relative">
