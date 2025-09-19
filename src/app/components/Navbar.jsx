@@ -21,12 +21,12 @@ const Navbar = () => {
   };
 
   const navLinks = (
-  <>
-    {["Home", "About", "Skills", "Projects", "Contact"].map((label) => (
-      <li key={label}>
-        <Link
-          href={`/${label.toLowerCase() === "home" ? "" : label.toLowerCase()}`}
-          className="
+    <>
+      {["Home", "About", "Skills", "Projects", "Contact"].map((label) => (
+        <li key={label}>
+          <Link
+            href={`/${label.toLowerCase() === "home" ? "" : label.toLowerCase()}`}
+            className="
             relative
             text-base
             font-medium
@@ -48,19 +48,19 @@ const Navbar = () => {
             hover:before:w-full
             hover:-translate-y-1
             "
-        >
-          {label}
-        </Link>
-      </li>
-    ))}
-  </>
-);
+          >
+            {label}
+          </Link>
+        </li>
+      ))}
+    </>
+  );
 
 
   return (
     <nav
       className={`w-full fixed top-0 left-0 right-0 z-50 bg-base-100 shadow-md transition-colors duration-300
-        ${theme === "dark" ? "text-white bg-gray-900" : "text-gray-900 bg-white"}`}
+        ${theme === "dark" ? "text-white bg-gray-900" : "text-gray-900 bg-[#D99486]"}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -123,17 +123,17 @@ const Navbar = () => {
                   </svg>
                 )}
               </button>
-
-              {/* Dropdown Mobile Menu */}
-              {menuOpen && (
-                <ul
-                  className={`absolute right-0 mt-2 w-48 bg-base-100 dark:bg-gray-800 rounded-md shadow-lg pl-2 py-2 font-medium text-lg`}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {navLinks}
-                </ul>
-              )}
             </div>
+
+            {/* Dropdown Mobile Menu */}
+            {menuOpen && (
+              <ul
+                className={`lg:hidden flex flex-col space-y-3 absolute top-16 left-0 w-full bg-base-100 dark:bg-gray-800 shadow-md p-4 font-medium text-lg`}
+                onClick={() => setMenuOpen(false)}
+              >
+                {navLinks}
+              </ul>
+            )}
           </div>
         </div>
       </div>

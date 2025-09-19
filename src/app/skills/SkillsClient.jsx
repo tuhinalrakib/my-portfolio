@@ -1,5 +1,4 @@
-'use client';
-
+"use client"
 import { motion } from 'framer-motion';
 import {
   FaHtml5,
@@ -16,7 +15,8 @@ import {
   SiFirebase,
   SiNextdotjs,
   SiJavascript,
-  SiPostman
+  SiPostman,
+  SiRedux,
 } from 'react-icons/si';
 import { BiLogoVisualStudio } from "react-icons/bi";
 
@@ -56,6 +56,7 @@ const SkillsClient = () => {
               <span className="tooltip" data-tip="JavaScript"><SiJavascript className="text-yellow-400" /></span>
               <span className="tooltip" data-tip="React.js"><FaReact className="text-cyan-400" /></span>
               <span className="tooltip" data-tip="Next.js"><SiNextdotjs className="text-black dark:text-white" /></span>
+              <span className="tooltip" data-tip="Redux"><SiRedux className="text-purple-600" /></span>
               <span className="tooltip" data-tip="Tailwind CSS"><SiTailwindcss className="text-cyan-500" /></span>
               <span className="tooltip" data-tip="DaisyUI">🌼</span>
             </div>
@@ -74,6 +75,7 @@ const SkillsClient = () => {
               <span className="tooltip" data-tip="Express.js"><SiExpress className="text-gray-700 dark:text-white" /></span>
               <span className="tooltip" data-tip="MongoDB"><SiMongodb className="text-green-500" /></span>
               <span className="tooltip" data-tip="Firebase"><SiFirebase className="text-yellow-500" /></span>
+              <span className="tooltip text-black dark:text-white" data-tip="Socket.io">⚡</span>
               <span className="tooltip" data-tip="JWT">🔐</span>
             </div>
           </div>
