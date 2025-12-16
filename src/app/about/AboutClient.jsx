@@ -47,8 +47,8 @@ const AboutClient = () => {
           I combine clean code with sleek design to build user-first interfaces that work flawlessly across devices.
           <br /><br />
           With tools like{" "}
-          <span className="font-semibold text-primary">
-            React, Next.js, MongoDB, Firebase, and Tailwind CSS
+          <span className="font-extrabold text-primary">
+            TypeScript, React, Next.js, Tailwind CSS, Material UI, Shadcn UI, Firebase, Next-Auth, Context API, Redux Tooltkit(RTK), Socket.io, Node.js, Express.js, Redis, MongoDB and Mongoose 
           </span>
           , I specialize in creating performance-driven products that scale.
           My approach is not just about code — it’s about crafting seamless digital experiences that leave an impact.

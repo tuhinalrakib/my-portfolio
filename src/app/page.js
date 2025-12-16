@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./about/page";
 import Skills from "./skills/page";
@@ -14,9 +13,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="scroll-smooth">
+      <main className="scroll-smooth w-full mx-auto">
 
-        <section id="home" className="pt-16">
+        <section id="home">
           <Hero />
         </section>
 
