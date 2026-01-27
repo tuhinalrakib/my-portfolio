@@ -1,142 +1,138 @@
 'use client';
+
 import { useTheme } from "@/context/ThemeContext";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FaEnvelope, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="relative hero min-h-screen bg-gradient-to-br from-[#F8FAFC] to-[#E0E7FF] text-gray-900 ">
+    <section className="relative min-h-screen flex items-center justify-center bg-[#030712] overflow-hidden px-6">
+      
+      {/* Dynamic Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-600/10 rounded-full blur-[120px] animate-pulse"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-600/10 rounded-full blur-[120px] animate-pulse"></div>
+      </div>
 
-      {/* Background Decorative Blobs */}
-      <div className="absolute -top-20 -left-20 w-72 h-72 bg-purple-300 opacity-20 rounded-full blur-3xl"></div>
-      <div className="absolute top-40 right-10 w-72 h-72 bg-pink-300 opacity-20 rounded-full blur-3xl"></div>
-
-      <div className="hero-content flex-col lg:flex-row-reverse gap-12 z-10">
-
-        {/* Profile Image with Glow & Animation */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          whileHover={{ scale: 1.05 }}
-          className="relative"
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center z-10">
+        
+        {/* Left Side: Text Content */}
+        <motion.div 
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="order-2 lg:order-1"
         >
-          <div className="p-2 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-yellow-500 ">
-            <Image
-              src="/myImage.jpg"
-              alt="Profile"
-              loading="lazy"
-              width={300}
-              height={300}
-              className="rounded-full shadow-2xl border-4 border-transparent"
-            />
-          </div>
-        </motion.div>
-
-        {/* Text Content */}
-        <motion.div
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <h1
-            data-aos="fade-right"
-            data-aos-duration="2000"
-            className={`text-5xl font-bold leading-tight ${theme === "dark" && "text-white"}`}
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="inline-block px-4 py-1.5 mb-6 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 text-sm font-medium tracking-wide"
           >
-            Hi, I'm <span className="text-purple-600">Tuhin</span>
+            Available for New Projects
+          </motion.div>
+
+          <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-4">
+            Hi, I'm <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">Tuhin</span>
           </h1>
 
-          <h3
-            data-aos="fade-right"
-            data-aos-duration="3000"
-            className={`text-xl md:text-2xl lg:text-4xl my-7 font-semibold ${theme === "dark" && "text-white"}`}
-          >
-            I{" "}
-            <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-400 bg-clip-text text-transparent font-extrabold">
-              <Typewriter
-                words={[
-                  "build full-stack web apps",
-                  "love clean and modern UI",
-                  "solve real-world problems with code",
-                  "work with React, Node & MongoDB",
-                  "deploy secure and scalable apps",
-                ]}
-                loop={0}
-                cursor
-                cursorStyle="|"
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={1500}
-              />
-            </span>
-          </h3>
-
-          <p
-            data-aos="fade-right"
-            data-aos-delay="300"
-            data-aos-duration="4000"
-            className="py-4 text-lg text-black"
-          >
-            I’m a passionate{" "}
-            <span className="font-semibold">MERN Stack Developer</span> who loves building full-stack web apps with elegant UIs and modern tools like <span className="font-semibold">React.js</span>, 
-            <span className="font-semibold">TypeScript</span>, 
-            <span className="font-semibold">Next.js</span>, <span className="font-semibold">MongoDB, Mongoose</span>, <span className="font-semibold">Redux, Socket.io</span>, Firebase, <span className="font-semibold">material UI</span> and <span className="font-semibold">Tailwind CSS</span>.
-          </p>
-          <div className="flex mb-3 gap-6 text-3xl">
-            <a
-              href="https://github.com/tuhinalrakib"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="hover:text-yellow-300 transition duration-300 transform hover:scale-110"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/tuhin-al-rakib-5a4a71103/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="hover:text-sky-400 transition duration-300 transform hover:scale-110"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://www.facebook.com/engrtuhin.roky"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="hover:text-blue-400 transition duration-300 transform hover:scale-110"
-            >
-              <FaFacebook />
-            </a>
+          <div className="h-12 md:h-16">
+            <h3 className="text-2xl md:text-4xl font-semibold text-gray-300">
+              I{" "}
+              <span className="text-purple-400">
+                <Typewriter
+                  words={[
+                    "build scalable web apps",
+                    "design modern UI/UX",
+                    "architect MERN stacks",
+                    "solve complex problems"
+                  ]}
+                  loop={0}
+                  cursor
+                  cursorStyle="_"
+                  typeSpeed={60}
+                  deleteSpeed={40}
+                />
+              </span>
+            </h3>
           </div>
-          {/* Buttons */}
-          <div className="flex gap-4 flex-wrap">
+
+          <p className="mt-6 text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
+            A passionate <span className="text-white border-b border-purple-500/50">MERN Stack Developer</span> specializing in building high-performance digital experiences with React, Next.js, and Node.js.
+          </p>
+
+          {/* Social Icons */}
+          <div className="flex gap-6 mt-8">
+            {[
+              { icon: <FaGithub />, link: "https://github.com/tuhinalrakib" },
+              { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/tuhin-al-rakib-5a4a71103/" },
+              { icon: <FaFacebook />, link: "https://www.facebook.com/engrtuhin.roky" }
+            ].map((social, i) => (
+              <a 
+                key={i} 
+                href={social.link} 
+                target="_blank" 
+                className="text-2xl text-gray-500 hover:text-purple-500 hover:-translate-y-1 transition-all duration-300"
+              >
+                {social.icon}
+              </a>
+            ))}
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex flex-wrap gap-5 mt-10">
             <Link
               href="/projects"
-              className="btn btn-primary hover:scale-105 transition-transform"
+              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-2xl shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 hover:scale-105 transition-all duration-300"
             >
-              🚀 See My Work
+              🚀 View My Projects
             </Link>
 
             <a
               href="/MyResumeCv.pdf"
               download
-              className="btn btn-outline btn-primary hover:bg-primary hover:text-white transition"
+              className="px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all duration-300"
             >
-              📄 Download CV
+              📄 Get Resume
             </a>
           </div>
         </motion.div>
+
+        {/* Right Side: Profile Image with Modern Frame */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          className="order-1 lg:order-2 flex justify-center"
+        >
+          <div className="relative group">
+            {/* Animated Ring */}
+            <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 opacity-30 blur-xl group-hover:opacity-60 animate-spin-slow transition-all duration-1000"></div>
+            
+            {/* Image Container */}
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-900 shadow-2xl">
+              <Image
+                src="/myImage.jpg"
+                alt="Tuhin's Profile"
+                fill
+                className="object-cover transform group-hover:scale-110 transition-transform duration-700"
+              />
+            </div>
+
+            {/* Floating Badges (Optional) */}
+            <div className="absolute -bottom-4 -right-4 bg-gray-900/80 backdrop-blur-md border border-white/10 p-3 rounded-2xl shadow-xl">
+              <p className="text-2xl">💻</p>
+            </div>
+          </div>
+        </motion.div>
+
       </div>
-    </div>
+    </section>
   );
 };
 

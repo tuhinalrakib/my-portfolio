@@ -1,25 +1,21 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import {
-  AppBar,
-  Toolbar,
-  Button,
-  IconButton,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
+import { motion, AnimatePresence } from "framer-motion";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
+  // Scroll ইফেক্ট হ্যান্ডেল করার জন্য
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
     { label: "Home", href: "/" },
@@ -29,61 +25,78 @@ export default function Navbar() {
     { label: "Contact", href: "/contact" },
   ];
 
-  const drawer = (
-    <div className="w-64 h-full flex flex-col bg-white">
-      <div className="flex justify-between items-center px-4 py-3 border-b">
-        <h1 className="text-xl font-bold">My Portfolio</h1>
-        <IconButton onClick={handleDrawerToggle}>
-          <CloseIcon />
-        </IconButton>
-      </div>
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item.href} onClick={handleDrawerToggle}>
-            <Link href={item.href} className="w-full">
-              <ListItemText primary={item.label} />
-            </Link>
-          </ListItem>
-        ))}
-      </List>
-    </div>
-  );
-
   return (
-    <>
-      <AppBar position="sticky" color="primary">
-        <Toolbar className="flex justify-between">
-          <h1 className="text-xl font-bold">
-            <Link href="/">Tuhin.Dev</Link>
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 px-6 py-4 ${
+        scrolled 
+        ? "bg-[#030712]/80 backdrop-blur-lg border-b border-white/10 py-3" 
+        : "bg-transparent"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        {/* Logo */}
+        <Link href="/" className="group">
+          <h1 className="text-2xl font-black tracking-tighter text-white">
+            TUHIN<span className="text-purple-500 group-hover:text-pink-500 transition-colors">.DEV</span>
           </h1>
+        </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-4">
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center space-x-8">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm font-medium text-gray-300 hover:text-white hover:border-b border-purple-500 transition-all duration-200 pb-1"
+            >
+              {item.label}
+            </Link>
+          ))}
+          <Link
+            href="#contact"
+            className="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-sm font-semibold text-white hover:bg-white hover:text-black transition-all duration-300"
+          >
+            Hire Me
+          </Link>
+        </div>
+
+        {/* Mobile Toggle */}
+        <button
+          className="md:hidden text-white text-3xl"
+          onClick={() => setMobileOpen(!mobileOpen)}
+        >
+          {mobileOpen ? <HiX /> : <HiMenuAlt3 />}
+        </button>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 100 }}
+            className="fixed inset-0 top-0 right-0 w-full h-screen bg-[#030712] z-50 flex flex-col items-center justify-center space-y-8 md:hidden"
+          >
+            <button
+              className="absolute top-6 right-6 text-white text-4xl"
+              onClick={() => setMobileOpen(false)}
+            >
+              <HiX />
+            </button>
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                <Button color="inherit">{item.label}</Button>
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setMobileOpen(false)}
+                className="text-3xl font-bold text-gray-400 hover:text-white transition-colors"
+              >
+                {item.label}
               </Link>
             ))}
-          </div>
-
-          {/* Mobile Hamburger */}
-          <div className="md:hidden">
-            <IconButton color="inherit" onClick={handleDrawerToggle}>
-              <MenuIcon />
-            </IconButton>
-          </div>
-        </Toolbar>
-      </AppBar>
-
-      {/* Mobile Drawer */}
-      <Drawer
-        anchor="right"
-        open={mobileOpen}
-        onClose={handleDrawerToggle}
-        ModalProps={{ keepMounted: true }}
-      >
-        {drawer}
-      </Drawer>
-    </>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
   );
 }

@@ -23,11 +23,16 @@ export const metadata = {
   },
   keywords: ['Frontend Developer', 'MERN Stack Developer', 'Software Engineer'],
   description: "I am a frontend Developer by using MERN Stack",
+  icons: {
+    icon: "/myImage.jpg",
+    shortcut: "/myImage.jpg",
+    apple: "/myImage.jpg",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="rahminoTheme" className="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
