@@ -1,7 +1,7 @@
 "use client"
 import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGithub, FaGitAlt } from 'react-icons/fa';
-import { SiTailwindcss, SiMongodb, SiExpress, SiFirebase, SiNextdotjs, SiJavascript, SiPostman, SiRedux, SiMui, SiRedis, SiSocketdotio, SiJsonwebtokens } from 'react-icons/si';
+import { SiTailwindcss, SiMongodb, SiExpress, SiFirebase, SiNextdotjs, SiJavascript, SiPostman, SiRedux, SiMui, SiRedis, SiSocketdotio, SiJsonwebtokens, SiDjango, SiPostgresql, SiMysql, SiTypescript } from 'react-icons/si';
 import { WalletCards } from 'lucide-react';
 import { BiLogoVisualStudio } from "react-icons/bi";
 
@@ -12,6 +12,7 @@ const skillCategories = [
       { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
       { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
       { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+      { name: "TypeScript", icon: <SiTypescript className="text-blue-400" /> },
       { name: "React.js", icon: <FaReact className="text-cyan-400" /> },
       { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
       { name: "Redux", icon: <SiRedux className="text-purple-500" /> },
@@ -24,11 +25,20 @@ const skillCategories = [
     skills: [
       { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
       { name: "Express.js", icon: <SiExpress className="text-gray-400" /> },
-      { name: "MongoDB", icon: <SiMongodb className="text-green-400" /> },
+      { name: "Django", icon: <SiDjango className="text-green-600" /> },
+      { name: "DRF", icon: <span className="text-red-500 font-bold">DRF</span> },
       { name: "Redis", icon: <SiRedis className="text-red-500" /> },
       { name: "Firebase", icon: <SiFirebase className="text-orange-400" /> },
       { name: "Socket.io", icon: <SiSocketdotio className="text-white" /> },
       { name: "JWT", icon: <SiJsonwebtokens className="text-pink-500" /> },
+    ],
+  },
+  {
+    title: "Database",
+    skills: [
+      { name: "MongoDB", icon: <SiMongodb className="text-green-400" /> },
+      { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-500" /> },
+      { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
     ],
   },
   {
@@ -67,7 +77,7 @@ const SkillsClient = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, idx) => (
             <motion.div
               key={idx}

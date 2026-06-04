@@ -2,7 +2,7 @@ import AboutClient from "./AboutClient";
 
 export const metadata = {
     title: "About Me",
-    description: "A brief introduction to who I am, what I do, and my background as a MERN stack developer.",
+    description: "Full Stack Developer specializing in MERN Stack and Python Django/DRF. I build scalable web applications with modern technologies including React, Next.js, Node.js, Express, and Django REST Framework.",
 };
 
 const About = () => {

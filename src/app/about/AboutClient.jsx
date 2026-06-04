@@ -42,21 +42,25 @@ const AboutClient = () => {
 
           <div className="space-y-6 text-gray-400 text-lg leading-relaxed">
             <p>
-              I'm <span className="text-white font-semibold">Tuhin</span>, a results-driven <span className="text-white border-b-2 border-purple-500">MERN Stack Developer</span> dedicated to building digital products that blend functional excellence with aesthetic precision.
+              I'm <span className="text-white font-semibold">Tuhin</span>, a versatile <span className="text-white border-b-2 border-purple-500">Full Stack Developer</span> with expertise in modern web technologies and backend frameworks. I specialize in building scalable, high-performance applications using MERN Stack and Python with Django/DRF.
             </p>
-            
+
             <p>
-              My philosophy is simple: <span className="italic text-gray-300">Code should be clean, and user experiences should be effortless.</span> I don't just build websites; I craft high-performance scalable systems.
+              I design and develop end-to-end solutions, from responsive frontend interfaces to robust REST APIs. My approach combines technical excellence with user-centric design, ensuring every product delivers exceptional performance and seamless user experiences.
+            </p>
+
+            <p className="text-sm text-gray-500">
+              With hands-on experience in full-stack development, I'm proficient in building microservices, real-time applications, and data-driven backends that power modern web applications.
             </p>
 
             {/* Modern Skills Tags instead of long bold text */}
             <div className="flex flex-wrap gap-2 pt-4">
-              {["TypeScript", "React", "Next.js", "Tailwind", "Node.js", "MongoDB", "Socket.io", "Redux"].map((skill) => (
+              {["React", "Next.js", "TypeScript", "Node.js", "Express", "MongoDB", "Django", "DRF", "PostgreSQL", "Tailwind", "Socket.io", "Redux"].map((skill) => (
                 <span key={skill} className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm hover:bg-purple-500/20 hover:border-purple-500/50 transition-all cursor-default text-gray-300">
                   {skill}
                 </span>
               ))}
-              <span className="px-4 py-2 text-sm text-purple-400 font-medium">+ Many More</span>
+              <span className="px-4 py-2 text-sm text-purple-400 font-medium">+ More</span>
             </div>
           </div>
 

@@ -47,9 +47,10 @@ const Hero = () => {
               <span className="text-purple-400">
                 <Typewriter
                   words={[
-                    "build scalable web apps",
+                    "build full stack applications",
                     "design modern UI/UX",
-                    "architect MERN stacks",
+                    "architect MERN & Django stacks",
+                    "create scalable backends with Python",
                     "solve complex problems"
                   ]}
                   loop={0}
@@ -63,7 +64,7 @@ const Hero = () => {
           </div>
 
           <p className="mt-6 text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
-            A passionate <span className="text-white border-b border-purple-500/50">MERN Stack Developer</span> specializing in building high-performance digital experiences with React, Next.js, and Node.js.
+            A full stack developer specializing in <span className="text-white border-b border-purple-500/50">MERN Stack & Python/Django</span>, crafting high-performance digital experiences with React, Next.js, Node.js, and Django.
           </p>
 
           {/* Social Icons */}
